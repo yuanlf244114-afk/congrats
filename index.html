@@ -1,0 +1,1935 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1, user-scalable=no" />
+<title>离职庆贺 · 一段两年的回忆</title>
+<meta name="ext-resource-dependency" content="assets/wechat-heinu.png" data-resource-id="wechatHeinu" />
+<meta name="ext-resource-dependency" content="assets/act1-cubicle.png" data-resource-id="act1Cubicle" />
+<meta name="ext-resource-dependency" content="assets/act2-takeout.png" data-resource-id="act2Takeout" />
+<meta name="ext-resource-dependency" content="assets/act3-parking.png" data-resource-id="act3Parking" />
+<meta name="ext-resource-dependency" content="assets/act-monthstar.png" data-resource-id="actMonthstar" />
+<meta name="ext-resource-dependency" content="assets/act-birthday.png" data-resource-id="actBirthday" />
+<meta name="ext-resource-dependency" content="assets/act-belly.png" data-resource-id="actBelly" />
+<meta name="ext-resource-dependency" content="assets/act-chat-pregnant.png" data-resource-id="actChatPregnant" />
+<meta name="ext-resource-dependency" content="assets/lottery-handshake.png" data-resource-id="lotteryHandshake" />
+<meta name="ext-resource-dependency" content="assets/lilu-avatar.png" data-resource-id="liluAvatar" />
+<meta name="ext-resource-dependency" content="assets/music-main.mp3" data-resource-id="musicMain" />
+<meta name="ext-resource-dependency" content="assets/music-finale.mp3" data-resource-id="musicFinale" />
+<template id="__bundler_thumbnail" data-bg-color="#1a1612">
+  <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+    <rect width="1200" height="800" fill="#1a1612"/>
+    <rect x="260" y="160" width="680" height="480" rx="8" fill="#f1e8d4"/>
+    <path d="M260 160 L600 440 L940 160 Z" fill="#e4d2a5" stroke="#b8923a" stroke-width="3"/>
+    <circle cx="600" cy="400" r="70" fill="#8b3a2e"/>
+    <text x="600" y="428" text-anchor="middle" font-family="serif" font-size="72" fill="#f1e8d4">启</text>
+  </svg>
+</template>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700&family=Noto+Sans+SC:wght@400;500;700&family=JetBrains+Mono:wght@400;500&family=Ma+Shan+Zheng&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --paper: #f1e8d4;
+    --paper-2: #e7dcc1;
+    --paper-3: #d8c9a6;
+    --ink: #1f1814;
+    --ink-2: #3a2f25;
+    --muted: #786551;
+    --seal: #8b3a2e;
+    --gold: #b8923a;
+    --shadow: 0 2px 0 rgba(31,24,20,0.04), 0 10px 30px rgba(31,24,20,0.08);
+  }
+  * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+  html, body {
+    margin: 0; padding: 0;
+    background: #1a1612;
+    color: var(--ink);
+    font-family: "Noto Serif SC", "Songti SC", serif;
+    overscroll-behavior: none;
+    overflow: hidden;
+    height: 100dvh;
+    width: 100vw;
+  }
+  body {
+    display: flex; align-items: stretch; justify-content: center;
+    background:
+      radial-gradient(1200px 600px at 50% -200px, #2b231b 0%, #1a1612 60%);
+  }
+  #stage {
+    position: relative;
+    width: 100%;
+    max-width: 480px;
+    height: 100dvh;
+    background:
+      radial-gradient(120% 60% at 50% 0%, #f7eed9 0%, var(--paper) 55%, var(--paper-2) 100%);
+    box-shadow: 0 0 60px rgba(0,0,0,0.4);
+    overflow: hidden;
+    isolation: isolate;
+  }
+  /* Subtle paper grain */
+  #stage::before {
+    content: "";
+    position: absolute; inset: 0;
+    background-image:
+      radial-gradient(circle at 20% 30%, rgba(120,101,81,0.06) 0, transparent 60%),
+      radial-gradient(circle at 80% 70%, rgba(120,101,81,0.06) 0, transparent 60%);
+    pointer-events: none;
+    z-index: 0;
+  }
+  #stage::after {
+    content:"";
+    position: absolute; inset:0;
+    background-image:
+      url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='120'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' seed='5'/><feColorMatrix values='0 0 0 0 0.12 0 0 0 0 0.09 0 0 0 0 0.06 0 0 0 0.12 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+    background-size: 240px 240px;
+    opacity: 0.4;
+    mix-blend-mode: multiply;
+    pointer-events: none;
+    z-index: 1;
+  }
+  .scene {
+    position: absolute; inset: 0;
+    display: flex; flex-direction: column;
+    padding: max(28px, env(safe-area-inset-top)) 24px max(28px, env(safe-area-inset-bottom));
+    z-index: 2;
+    opacity: 0;
+    transform: translateY(8px);
+    transition: opacity 480ms ease, transform 480ms cubic-bezier(.2,.7,.2,1);
+    pointer-events: none;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .scene.active {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+  .scene-inner {
+    margin: auto 0;
+    width: 100%;
+    display: flex; flex-direction: column;
+    gap: 22px;
+  }
+  .eyebrow {
+    font-family: "Noto Sans SC", sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.32em;
+    color: var(--muted);
+    text-transform: uppercase;
+  }
+  .title {
+    font-family: "Noto Serif SC", serif;
+    font-weight: 700;
+    font-size: clamp(22px, 6.4vw, 30px);
+    line-height: 1.45;
+    color: var(--ink);
+    letter-spacing: 0.01em;
+    text-wrap: pretty;
+  }
+  .body {
+    font-family: "Noto Serif SC", serif;
+    font-weight: 400;
+    font-size: clamp(15px, 4.2vw, 17px);
+    line-height: 1.85;
+    color: var(--ink-2);
+    overflow-wrap: break-word;
+  }
+  .body p {
+    margin: 0 0 1em;
+    text-align: justify;
+    text-justify: inter-ideograph;
+  }
+  .body p:last-child { margin-bottom: 0; }
+  .mono {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 12px;
+    letter-spacing: 0.04em;
+    color: var(--muted);
+  }
+  .arrow {
+    margin: 24px auto 0;
+    width: 56px; height: 56px;
+    border-radius: 999px;
+    border: 1px solid rgba(31,24,20,0.18);
+    background: rgba(255,255,255,0.4);
+    color: var(--ink);
+    display: flex; align-items: center; justify-content: center;
+    cursor: pointer;
+    animation: pulse 1.8s ease-in-out infinite;
+    flex: 0 0 auto;
+    backdrop-filter: blur(4px);
+  }
+  .arrow svg { width: 22px; height: 22px; }
+  @keyframes pulse {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(6px); }
+  }
+  .choices {
+    display: flex; flex-direction: column; gap: 12px;
+    margin-top: 8px;
+  }
+  .choice {
+    appearance: none;
+    border: 1px solid rgba(31,24,20,0.22);
+    background: rgba(255,255,255,0.45);
+    color: var(--ink);
+    font-family: "Noto Sans SC", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 16px 18px;
+    border-radius: 14px;
+    cursor: pointer;
+    text-align: center;
+    transition: transform 160ms ease, background 160ms ease, border-color 160ms ease;
+  }
+  .choice:hover { background: rgba(255,255,255,0.7); }
+  .choice:active { transform: scale(0.98); }
+  .choice.shake { animation: shake 0.5s ease; }
+  @keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    20% { transform: translateX(-8px); }
+    40% { transform: translateX(8px); }
+    60% { transform: translateX(-6px); }
+    80% { transform: translateX(6px); }
+  }
+  .toast {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%) scale(0.9);
+    background: rgba(31,24,20,0.92);
+    color: #f1e8d4;
+    padding: 14px 22px;
+    border-radius: 12px;
+    font-family: "Noto Sans SC", sans-serif;
+    font-size: 15px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 260ms ease, transform 260ms ease;
+    z-index: 50;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.4);
+  }
+  .toast.show { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+
+  /* Placeholder image card */
+  .ph {
+    position: relative;
+    border-radius: 6px;
+    overflow: hidden;
+    background:
+      repeating-linear-gradient(45deg, #d8c9a6 0 10px, #d2c19a 10px 20px);
+    border: 1px solid rgba(31,24,20,0.18);
+    box-shadow: 0 6px 18px rgba(31,24,20,0.12);
+    display: flex; align-items: center; justify-content: center;
+    padding: 18px;
+    text-align: center;
+    color: var(--ink-2);
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    line-height: 1.6;
+  }
+  .ph::after {
+    content: "";
+    position: absolute; inset: 8px;
+    border: 1px dashed rgba(31,24,20,0.25);
+    border-radius: 4px;
+    pointer-events: none;
+  }
+  .ph-label {
+    background: rgba(241,232,212,0.92);
+    padding: 6px 10px;
+    border-radius: 4px;
+    max-width: 80%;
+    z-index: 1;
+  }
+
+  /* Note icon (easter egg) */
+  .note {
+    position: absolute;
+    bottom: 92px;
+    right: 18px;
+    width: 36px; height: 44px;
+    background: linear-gradient(180deg, #f7e9b8 0%, #ecd98a 100%);
+    border: 1px solid #b8923a;
+    border-radius: 2px 2px 6px 6px;
+    transform: rotate(-6deg);
+    box-shadow: 2px 4px 10px rgba(0,0,0,0.18);
+    cursor: pointer;
+    z-index: 20;
+    animation: noteFloat 3s ease-in-out infinite;
+    display: flex; align-items: center; justify-content: center;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 9px;
+    color: #6b5421;
+  }
+  .note::before {
+    content: "";
+    position: absolute;
+    top: -4px; left: 50%;
+    transform: translateX(-50%);
+    width: 14px; height: 8px;
+    background: rgba(184,146,58,0.7);
+    border-radius: 2px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  }
+  .note span { transform: rotate(2deg); }
+  @keyframes noteFloat {
+    0%, 100% { transform: rotate(-6deg) translateY(0); }
+    50% { transform: rotate(-4deg) translateY(-4px); }
+  }
+  .note.gone { display: none; }
+
+  /* ENVELOPE */
+  .env-wrap {
+    width: min(86%, 320px);
+    aspect-ratio: 1.55 / 1;
+    position: relative;
+    margin: 0 auto;
+    perspective: 1200px;
+    cursor: pointer;
+    user-select: none;
+  }
+  .env {
+    position: relative; width: 100%; height: 100%;
+    transform-style: preserve-3d;
+  }
+  .env-body {
+    position: absolute; inset: 0;
+    background: linear-gradient(180deg, #efe1bd 0%, #e4d2a5 100%);
+    border: 1px solid #b8923a;
+    border-radius: 4px;
+    box-shadow: 0 14px 30px rgba(31,24,20,0.2), inset 0 -20px 30px rgba(0,0,0,0.06);
+    overflow: visible;
+  }
+  .env-body::before {
+    content:"";
+    position: absolute; inset: 0;
+    background:
+      linear-gradient(45deg, transparent 50%, rgba(255,255,255,0.15) 50%) bottom right / 60% 60% no-repeat;
+  }
+  .env-flap {
+    position: absolute; left: 0; right: 0; top: 0;
+    height: 60%;
+    background: linear-gradient(180deg, #e8d6a8 0%, #d8c084 100%);
+    clip-path: polygon(0 0, 50% 100%, 100% 0);
+    transform-origin: top center;
+    transform: rotateX(0deg);
+    transition: transform 900ms cubic-bezier(.5,-0.2,.2,1.2);
+    z-index: 3;
+    border-top: 1px solid #b8923a;
+  }
+  .env.open .env-flap { transform: rotateX(-180deg); z-index: 1;}
+  .env-seal {
+    position: absolute;
+    left: 50%; top: 56%;
+    transform: translate(-50%, -50%);
+    width: 56px; height: 56px;
+    background: radial-gradient(circle at 35% 35%, #b14a3e, #8b3a2e 60%, #5e271f 100%);
+    border-radius: 999px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+    display: flex; align-items: center; justify-content: center;
+    color: rgba(241,232,212,0.85);
+    font-family: "Ma Shan Zheng", "Noto Serif SC", serif;
+    font-size: 26px;
+    z-index: 4;
+    transition: opacity 300ms;
+  }
+  .env.open .env-seal { opacity: 0; }
+  .env-letter {
+    position: absolute;
+    left: 6%; right: 6%; top: 12%;
+    height: 72%;
+    background: #faf3e1;
+    border: 1px solid #c8b88e;
+    border-radius: 2px;
+    z-index: 2;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    transition: transform 1100ms cubic-bezier(.2,.7,.2,1) 200ms;
+    transform: translateY(0);
+  }
+  .env.open .env-letter { transform: translateY(-58%); }
+  .env-letter::before, .env-letter::after {
+    content:"";
+    position: absolute;
+    left: 14%; right: 14%;
+    height: 1px;
+    background: rgba(31,24,20,0.15);
+  }
+  .env-letter::before { top: 30%; }
+  .env-letter::after { top: 55%; }
+  .env-tap-hint {
+    text-align: center;
+    margin-top: 18px;
+    font-family: "Noto Sans SC", sans-serif;
+    font-size: 13px;
+    color: var(--muted);
+    letter-spacing: 0.1em;
+    animation: blink 1.6s ease-in-out infinite;
+  }
+  @keyframes blink {
+    0%, 100% { opacity: 0.4; }
+    50% { opacity: 1; }
+  }
+
+  /* LETTER FULL */
+  .letter-paper {
+    background: #faf3e1;
+    border: 1px solid #c8b88e;
+    border-radius: 4px;
+    padding: 26px 22px;
+    box-shadow: 0 18px 36px rgba(31,24,20,0.15);
+    position: relative;
+    font-family: "Noto Serif SC", serif;
+    color: var(--ink);
+    font-size: 14px;
+    line-height: 1.95;
+  }
+  .letter-paper::before {
+    content: "OFFER · 录用通知";
+    position: absolute;
+    top: 10px; left: 22px;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 9px;
+    letter-spacing: 0.3em;
+    color: var(--muted);
+  }
+  .letter-paper h3 {
+    margin: 22px 0 12px;
+    font-weight: 500;
+    font-size: 15px;
+  }
+  .letter-paper p { margin: 0 0 12px; }
+  .letter-stamp {
+    position: absolute;
+    right: 16px; bottom: 14px;
+    width: 64px; height: 64px;
+    border: 2px solid var(--seal);
+    border-radius: 999px;
+    color: var(--seal);
+    font-family: "Ma Shan Zheng", serif;
+    font-size: 13px;
+    line-height: 1.1;
+    display: flex; align-items: center; justify-content: center;
+    text-align: center;
+    transform: rotate(-12deg);
+    opacity: 0.85;
+  }
+
+  /* WeChat-style stylized (NOT WeChat — generic chat bubble) */
+  .chat {
+    background: #ece6d4;
+    border: 1px solid rgba(31,24,20,0.12);
+    border-radius: 14px;
+    padding: 14px 14px 18px;
+    font-family: "Noto Sans SC", sans-serif;
+    box-shadow: 0 6px 18px rgba(31,24,20,0.08);
+  }
+  .chat-header {
+    text-align: center;
+    font-size: 12px;
+    color: var(--muted);
+    margin-bottom: 10px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid rgba(31,24,20,0.1);
+  }
+  .bubble-row { display: flex; margin-bottom: 8px; gap: 8px; align-items: flex-start; }
+  .bubble-row.me { flex-direction: row-reverse; }
+  .av {
+    width: 30px; height: 30px; border-radius: 4px;
+    background: var(--paper-3); flex: 0 0 30px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 12px; color: var(--ink); font-weight: 500;
+  }
+  .av.me { background: #8aa37a; color: #f1e8d4; }
+  .bubble {
+    background: #faf3e1;
+    border: 1px solid rgba(31,24,20,0.08);
+    padding: 8px 11px;
+    border-radius: 8px;
+    font-size: 13px;
+    line-height: 1.6;
+    max-width: 78%;
+    color: var(--ink);
+  }
+  .bubble.me { background: #b6d49a; color: var(--ink); }
+  .search-row {
+    background: #faf3e1;
+    border-radius: 8px;
+    padding: 10px 12px;
+    display: flex; gap: 10px; align-items: center;
+    font-family: "Noto Sans SC", sans-serif;
+    font-size: 13px;
+    color: var(--ink-2);
+    border: 1px solid rgba(31,24,20,0.08);
+  }
+  .search-row .key {
+    color: var(--seal);
+    font-weight: 700;
+  }
+  .search-list { display: flex; flex-direction: column; gap: 8px; margin-top: 8px; }
+  .search-item {
+    background: #faf3e1;
+    border-radius: 8px;
+    padding: 10px 12px;
+    font-size: 12px;
+    color: var(--ink-2);
+    border: 1px solid rgba(31,24,20,0.06);
+    line-height: 1.6;
+  }
+  .search-item b { color: var(--seal); font-weight: 600; }
+  .search-meta {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 10px;
+    color: var(--muted);
+    margin-top: 4px;
+  }
+
+  /* terminal */
+  .term {
+    background: #16110d;
+    color: #d8c9a6;
+    border-radius: 8px;
+    padding: 14px;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 12px;
+    line-height: 1.7;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+  }
+  .term .prompt { color: #8aa37a; }
+  .term .danger { color: #e07a5f; }
+  .term .blink { animation: cursor 1s steps(2) infinite; }
+  @keyframes cursor { 50% { opacity: 0; } }
+
+  /* News card (generic, original UI) */
+  .news {
+    background: #faf3e1;
+    border-radius: 12px;
+    padding: 16px;
+    border: 1px solid rgba(31,24,20,0.12);
+    box-shadow: 0 10px 24px rgba(31,24,20,0.15);
+    position: relative;
+  }
+  .news-head {
+    display: flex; justify-content: space-between; align-items: center;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 10px;
+    color: var(--muted);
+    margin-bottom: 10px;
+    letter-spacing: 0.1em;
+  }
+  .news-tag {
+    display: inline-block;
+    background: var(--seal);
+    color: var(--paper);
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+  }
+  .news h4 {
+    margin: 0 0 10px;
+    font-family: "Noto Sans SC", sans-serif;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 1.45;
+    color: var(--ink);
+  }
+  .news-body {
+    font-family: "Noto Sans SC", sans-serif;
+    font-size: 13px;
+    line-height: 1.8;
+    color: var(--ink-2);
+  }
+  .news-quote {
+    margin-top: 10px;
+    padding-left: 12px;
+    border-left: 2px solid var(--gold);
+    font-style: italic;
+    color: var(--muted);
+    font-size: 12px;
+  }
+
+  /* Scratch */
+  .scratch-wrap {
+    position: relative;
+    width: min(86%, 320px);
+    aspect-ratio: 1.5/1;
+    margin: 8px auto;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 24px rgba(31,24,20,0.2);
+    background: #faf3e1;
+    user-select: none;
+    touch-action: none;
+  }
+  .scratch-prize {
+    position: absolute; inset: 0;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    background:
+      radial-gradient(circle at 30% 30%, #fff6da 0, #f0deaa 60%, #d8b96a 100%);
+    color: var(--seal);
+    font-family: "Ma Shan Zheng", serif;
+    text-align: center;
+    padding: 18px;
+  }
+  .scratch-prize .big {
+    font-size: 44px;
+    line-height: 1.1;
+    letter-spacing: 0.04em;
+    text-shadow: 0 2px 0 rgba(139,58,46,0.2);
+  }
+  .scratch-prize .lab {
+    font-family: "Noto Sans SC", sans-serif;
+    font-size: 12px;
+    margin-top: 6px;
+    color: var(--ink-2);
+    letter-spacing: 0.3em;
+  }
+  .scratch-canvas {
+    position: absolute; inset: 0;
+    cursor: grab;
+    touch-action: none;
+  }
+  .scratch-hint {
+    text-align: center;
+    font-family: "Noto Sans SC", sans-serif;
+    font-size: 12px;
+    color: var(--muted);
+    margin-top: 10px;
+    letter-spacing: 0.2em;
+  }
+
+  /* Fireworks / celebration */
+  #fw { position: absolute; inset: 0; z-index: 30; pointer-events: none; }
+  .celebrate {
+    position: absolute; inset: 0;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: flex-start;
+    padding: 14vh 24px 24px;
+    text-align: center;
+    z-index: 40;
+    color: var(--ink);
+    overflow-y: auto;
+  }
+  .celebrate h1 {
+    font-family: "Ma Shan Zheng", "Noto Serif SC", serif;
+    font-size: clamp(34px, 10vw, 44px);
+    margin: 0 0 4px;
+    letter-spacing: 0.08em;
+    color: var(--seal);
+  }
+  .celebrate .sub {
+    font-family: "Noto Sans SC", sans-serif;
+    font-size: 12px;
+    color: var(--muted);
+    letter-spacing: 0.5em;
+    margin-bottom: 18px;
+  }
+  .celebrate .blessing {
+    background: rgba(250,243,225,0.7);
+    border: 1px solid rgba(184,146,58,0.4);
+    border-radius: 8px;
+    padding: 18px 18px;
+    font-family: "Noto Serif SC", serif;
+    font-size: 14px;
+    line-height: 1.95;
+    color: var(--ink-2);
+    text-align: left;
+    overflow-wrap: break-word;
+    box-shadow: 0 10px 24px rgba(31,24,20,0.1);
+  }
+  .celebrate .blessing p {
+    text-align: justify;
+    text-justify: inter-ideograph;
+  }
+  .celebrate .sign {
+    margin-top: 18px;
+    font-family: "Ma Shan Zheng", serif;
+    font-size: 22px;
+    color: var(--seal);
+  }
+  .restart {
+    margin-top: 20px;
+    background: transparent;
+    border: 1px solid rgba(31,24,20,0.3);
+    color: var(--ink-2);
+    padding: 10px 18px;
+    border-radius: 999px;
+    font-family: "Noto Sans SC", sans-serif;
+    font-size: 13px;
+    cursor: pointer;
+  }
+
+  /* progress dots */
+  .progress {
+    position: absolute;
+    top: max(14px, env(safe-area-inset-top));
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 25;
+    display: flex; gap: 5px;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 10px;
+    color: var(--muted);
+    letter-spacing: 0.2em;
+  }
+
+  /* Reveal animation for big takeaway lines */
+  .reveal-line {
+    font-family: "Noto Sans SC", sans-serif;
+    font-weight: 700;
+    font-size: clamp(18px, 5.2vw, 22px);
+    line-height: 1.6;
+    color: var(--seal);
+    text-align: center;
+    padding: 18px 0;
+  }
+  #mute-btn {
+    position: absolute;
+    top: max(14px, env(safe-area-inset-top));
+    right: 14px;
+    z-index: 60;
+    width: 36px; height: 36px;
+    border-radius: 999px;
+    border: 1px solid rgba(31,24,20,0.18);
+    background: rgba(255,255,255,0.55);
+    backdrop-filter: blur(4px);
+    color: var(--ink);
+    display: flex; align-items: center; justify-content: center;
+    cursor: pointer;
+    transition: background 160ms ease, transform 160ms ease;
+  }
+  #mute-btn:hover { background: rgba(255,255,255,0.85); }
+  #mute-btn:active { transform: scale(0.94); }
+  .crontab-tag {
+    display: inline-block;
+    background: var(--ink);
+    color: var(--paper);
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 13px;
+    letter-spacing: 0.05em;
+  }
+</style>
+</head>
+<body>
+  <div id="stage">
+    <div class="progress" id="progress">— · —</div>
+    <div id="root"></div>
+    <div class="note gone" id="note"><span>?</span></div>
+    <div class="toast" id="toast">—</div>
+    <canvas id="fw"></canvas>
+    <audio id="audio-main" src="assets/music-main.mp3" loop preload="auto"></audio>
+    <audio id="audio-finale" src="assets/music-finale.mp3" loop preload="auto"></audio>
+    <button id="mute-btn" aria-label="\u9759\u97f3\u5207\u6362" title="\u97f3\u4e50">
+      <svg id="mute-icon-on" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M11 5L6 9H3v6h3l5 4V5z"/>
+        <path d="M15.5 8.5a5 5 0 010 7"/>
+        <path d="M18.5 5.5a9 9 0 010 13"/>
+      </svg>
+      <svg id="mute-icon-off" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" style="display:none">
+        <path d="M11 5L6 9H3v6h3l5 4V5z"/>
+        <line x1="22" y1="9" x2="16" y2="15"/>
+        <line x1="16" y1="9" x2="22" y2="15"/>
+      </svg>
+    </button>
+  </div>
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+
+<script type="text/babel" data-source="scratch.jsx">
+// Scratch card component
+function ScratchCard({ onScratchedEnough, amount, label }) {
+  const wrapRef = React.useRef(null);
+  const canvasRef = React.useRef(null);
+  const [done, setDone] = React.useState(false);
+  const drawing = React.useRef(false);
+
+  React.useEffect(() => {
+    const canvas = canvasRef.current;
+    const wrap = wrapRef.current;
+    if (!canvas || !wrap) return;
+    const dpr = window.devicePixelRatio || 1;
+    const rect = wrap.getBoundingClientRect();
+    canvas.width = rect.width * dpr;
+    canvas.height = rect.height * dpr;
+    canvas.style.width = rect.width + "px";
+    canvas.style.height = rect.height + "px";
+    const ctx = canvas.getContext("2d");
+    ctx.scale(dpr, dpr);
+    // metallic foil
+    const g = ctx.createLinearGradient(0, 0, rect.width, rect.height);
+    g.addColorStop(0, "#8a8478");
+    g.addColorStop(0.5, "#c5b896");
+    g.addColorStop(1, "#6e6657");
+    ctx.fillStyle = g;
+    ctx.fillRect(0, 0, rect.width, rect.height);
+    ctx.fillStyle = "rgba(31,24,20,0.55)";
+    ctx.font = "600 14px 'Noto Sans SC', sans-serif";
+    ctx.textAlign = "center";
+    ctx.fillText("刮开此处", rect.width / 2, rect.height / 2 - 4);
+    ctx.font = "10px 'JetBrains Mono', monospace";
+    ctx.fillStyle = "rgba(31,24,20,0.45)";
+    ctx.fillText("SCRATCH HERE", rect.width / 2, rect.height / 2 + 14);
+    ctx.globalCompositeOperation = "destination-out";
+  }, []);
+
+  const erase = (clientX, clientY) => {
+    const canvas = canvasRef.current;
+    const rect = canvas.getBoundingClientRect();
+    const x = clientX - rect.left;
+    const y = clientY - rect.top;
+    const ctx = canvas.getContext("2d");
+    ctx.beginPath();
+    ctx.arc(x, y, 28, 0, Math.PI * 2);
+    ctx.fill();
+  };
+
+  const checkProgress = () => {
+    const canvas = canvasRef.current;
+    const ctx = canvas.getContext("2d");
+    const w = canvas.width, h = canvas.height;
+    // Sample only the central region (60% × 60% in the middle).
+    const cx = Math.floor(w * 0.2);
+    const cy = Math.floor(h * 0.2);
+    const cw = Math.floor(w * 0.6);
+    const ch = Math.floor(h * 0.6);
+    const sample = ctx.getImageData(cx, cy, cw, ch).data;
+    let cleared = 0, total = 0;
+    for (let i = 3; i < sample.length; i += 4 * 16) {
+      total++;
+      if (sample[i] < 30) cleared++;
+    }
+    if (cleared / total > 0.55 && !done) {
+      setDone(true);
+      // Wipe the entire foil so the prize is fully revealed.
+      ctx.clearRect(0, 0, w, h);
+      onScratchedEnough && onScratchedEnough();
+    }
+  };
+
+  const start = (e) => {
+    drawing.current = true;
+    move(e);
+  };
+  const end = () => {
+    if (drawing.current) checkProgress();
+    drawing.current = false;
+  };
+  const move = (e) => {
+    if (!drawing.current) return;
+    e.preventDefault();
+    const t = e.touches ? e.touches[0] : e;
+    erase(t.clientX, t.clientY);
+    // Probe progress live so the user doesn't need to lift the finger.
+    if (!done) checkProgress();
+  };
+
+  return (
+    <div>
+      <div className="scratch-wrap" ref={wrapRef}>
+        <div className="scratch-prize">
+          <div className="big">{amount}</div>
+          <div className="lab">{label}</div>
+        </div>
+        <canvas
+          ref={canvasRef}
+          className="scratch-canvas"
+          onMouseDown={start}
+          onMouseMove={move}
+          onMouseUp={end}
+          onMouseLeave={end}
+          onTouchStart={start}
+          onTouchMove={move}
+          onTouchEnd={end}
+        />
+      </div>
+      <div className="scratch-hint">用手指/鼠标刮开</div>
+    </div>
+  );
+}
+
+window.ScratchCard = ScratchCard;
+
+</script>
+<script type="text/babel" data-source="scenes.jsx">
+// All individual scenes. Each receives { go, showToast, setNoteVisible, restart }
+const { useState, useEffect, useRef } = React;
+
+// Resource lookup with dev-mode fallback to the assets/ folder.
+// When bundled by super_inline_html, window.__resources[id] is a blob URL.
+const A = (id, fallback) => (window.__resources && window.__resources[id]) || fallback;
+
+function PhotoFrame({ src, caption }) {
+  return (
+    <div style={{
+      position: "relative",
+      borderRadius: 8,
+      overflow: "hidden",
+      boxShadow: "0 14px 30px rgba(31,24,20,0.22)",
+      border: "1px solid rgba(31,24,20,0.15)",
+      background: "#1a1612",
+    }}>
+      <img src={src} alt={caption} style={{ width: "100%", display: "block" }} />
+      {caption && (
+        <div style={{
+          position: "absolute",
+          left: 10, bottom: 10,
+          background: "rgba(20,16,12,0.78)",
+          color: "#f1e8d4",
+          fontFamily: "'JetBrains Mono', monospace",
+          fontSize: 10,
+          letterSpacing: "0.15em",
+          padding: "5px 9px",
+          borderRadius: 3,
+          backdropFilter: "blur(2px)",
+        }}>{caption}</div>
+      )}
+    </div>
+  );
+}
+
+function Arrow({ onClick, label = "继续" }) {
+  return (
+    <button className="arrow" onClick={onClick} aria-label={label}>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M5 12h14M13 5l7 7-7 7" />
+      </svg>
+    </button>
+  );
+}
+
+function Choices({ items, onPick }) {
+  const [shakeIdx, setShake] = useState(-1);
+  return (
+    <div className="choices">
+      {items.map((it, i) => (
+        <button
+          key={i}
+          className={"choice" + (shakeIdx === i ? " shake" : "")}
+          onClick={() => {
+            if (it.fake) {
+              setShake(i);
+              setTimeout(() => setShake(-1), 600);
+              onPick(it, i);
+            } else {
+              onPick(it, i);
+            }
+          }}
+        >
+          {it.label}
+        </button>
+      ))}
+    </div>
+  );
+}
+
+// ---- Scene 1: title ----
+function TitleScene({ go }) {
+  return (
+    <div className="scene-inner" style={{ textAlign: "center" }}>
+      <div className="eyebrow">第 〇 幕 · OFFER</div>
+      <div className="title">2023 年，<br/>你收到了一封 offer。</div>
+      <div className="mono" style={{ marginTop: 8 }}>—— 一段两年长的回忆 ——</div>
+      <Arrow onClick={() => go("envelope")} />
+    </div>
+  );
+}
+
+// ---- Envelope opening ----
+function EnvelopeScene({ go }) {
+  const [open, setOpen] = useState(false);
+  return (
+    <div className="scene-inner" style={{ textAlign: "center" }}>
+      <div className="eyebrow">2023.12 · 来信一封</div>
+      <div className="env-wrap" onClick={() => !open && setOpen(true)}>
+        <div className={"env" + (open ? " open" : "")}>
+          <div className="env-body"></div>
+          <div className="env-letter"></div>
+          <div className="env-flap"></div>
+          <div className="env-seal">启</div>
+        </div>
+      </div>
+      {!open ? (
+        <div className="env-tap-hint">点击信封 · 启封</div>
+      ) : (
+        <Arrow onClick={() => go("letter")} />
+      )}
+    </div>
+  );
+}
+
+// ---- Letter content ----
+function LetterScene({ go }) {
+  return (
+    <div className="scene-inner">
+      <div className="letter-paper">
+        <h3 style={{ marginTop: 18 }}>尊敬的杨尚儒先生：</h3>
+        <p>经过严格的面试与综合评估，我们非常高兴地通知您，您已被 <b>北京思特奇信息技术股份有限公司</b> 录用，担任 <b>大数据工程师</b> 一职。</p>
+        <p>期待您的加入，共同推动数字化转型的伟大事业。</p>
+        <p style={{ color: "var(--muted)", fontSize: 13 }}>请于 2023 年 12 月 32 日前确认是否接受本 offer。</p>
+        <div className="letter-stamp">人事<br/>专用章</div>
+      </div>
+      <Arrow onClick={() => go("realize")} />
+    </div>
+  );
+}
+
+// ---- Realize / pre-choice ----
+function RealizeScene({ go }) {
+  return (
+    <div className="scene-inner">
+      <div className="eyebrow">你的内心</div>
+      <div className="body">
+        <p>你知道这家公司。上市企业，做运营商大数据的老牌玩家。</p>
+        <p>大数据工程师 —— 这也是你一直想做的方向。Hadoop、Spark、数据湖……你脑子里已经开始构想自己写 pipeline 的样子了。</p>
+        <p>你觉得这是一个不错的起点。</p>
+      </div>
+      <Arrow onClick={() => go("choiceOffer")} />
+    </div>
+  );
+}
+
+function ChoiceOfferScene({ go }) {
+  return (
+    <div className="scene-inner">
+      <div className="title" style={{ fontSize: 22 }}>要接受这份 offer 吗？</div>
+      <Choices
+        items={[
+          { label: "接受" },
+          { label: "同意" },
+        ]}
+        onPick={() => go("revealJob")}
+      />
+    </div>
+  );
+}
+
+function RevealJobScene({ go }) {
+  return (
+    <div className="scene-inner">
+      <div className="eyebrow">入职以后</div>
+      <div className="body">
+        <p>你的实际工作内容是：</p>
+        <p style={{ fontFamily: "JetBrains Mono, monospace", fontSize: 14, color: "var(--ink)", background: "rgba(31,24,20,0.05)", padding: "12px 14px", borderRadius: 6, lineHeight: 1.9 }}>
+          → 重启集群<br/>
+          → 导表<br/>
+          → 写台账<br/>
+          → 替甲方填写安全检查材料
+        </p>
+        <p>更糟糕的是，你的工作性质是国企的第三方驻场 —— 俗称 <b>外包</b>。</p>
+      </div>
+      <Arrow onClick={() => go("searchHeinu")} />
+    </div>
+  );
+}
+
+function SearchHeinuScene({ go }) {
+  return (
+    <div className="scene-inner">
+      <div className="eyebrow">微信 · 搜索 · 黑奴</div>
+      <img
+        src={A("wechatHeinu", "assets/wechat-heinu.png")}
+        alt="微信搜索黑奴的聊天记录截图"
+        style={{
+          width: "100%",
+          borderRadius: 10,
+          boxShadow: "0 14px 30px rgba(31,24,20,0.2)",
+          border: "1px solid rgba(31,24,20,0.12)",
+          display: "block",
+        }}
+      />
+      <div className="body">
+        <p>恭喜你成为了「黑奴」。</p>
+        <p>你的外号替你记住了你的努力。微信聊天记录把甲方罪恶的嘴脸一一记录在案。</p>
+      </div>
+      <Arrow onClick={() => go("hr")} />
+    </div>
+  );
+}
+
+// ---- Act 0.5 HR ----
+function HRScene({ go }) {
+  return (
+    <div className="scene-inner">
+      <div className="eyebrow">第 一 幕 · 入职</div>
+      <div className="body" style={{ color: "var(--muted)", fontStyle: "italic", marginBottom: 0 }}>
+        <p>可惜，当时的你并不知道这一切。你和 HR 加了微信。</p>
+      </div>
+      <div className="chat">
+        <div className="chat-header">HR · 小芳</div>
+        <div className="bubble-row">
+          <div className="av">芳</div>
+          <div className="bubble">恭喜杨先生通过面试！🎉</div>
+        </div>
+        <div className="bubble-row">
+          <div className="av">芳</div>
+          <div className="bubble">什么时候能来办理入职呀？越快越好哦~</div>
+        </div>
+        <div className="bubble-row">
+          <div className="av">芳</div>
+          <div className="bubble">这边是急招的~</div>
+        </div>
+        <div className="bubble-row me">
+          <div className="av me">我</div>
+          <div className="bubble me">好的，下周一可以</div>
+        </div>
+      </div>
+      <div className="body">
+        <p>消息回得很快，恭喜之余不忘催你尽快入职。你突然想起，JD 上确实写着「急招」二字。</p>
+        <p>这在业内很常见，不过你还是暗暗吐槽 —— 从海投简历到拿 offer，前后不到一周，这效率确实可以。</p>
+        <p style={{ color: "var(--muted)", fontStyle: "italic" }}>你默默想：在这种节奏的公司，虽然会很辛苦，但应该能获得很多成长吧。</p>
+      </div>
+      <Arrow onClick={() => go("choiceOnboard")} />
+    </div>
+  );
+}
+
+function ChoiceOnboardScene({ go }) {
+  return (
+    <div className="scene-inner">
+      <div className="title" style={{ fontSize: 22 }}>要去办理入职吗？</div>
+      <Choices
+        items={[
+          { label: "办理入职" },
+          { label: "开心地办理入职" },
+        ]}
+        onPick={() => go("revealRmrf")}
+      />
+    </div>
+  );
+}
+
+function RevealRmrfScene({ go }) {
+  return (
+    <div className="scene-inner">
+      <div className="eyebrow">入职第一天</div>
+      <div className="body">
+        <p>你了解到了「急招」的真正原因。</p>
+      </div>
+      <div className="term">
+        <div><span className="prompt">prev@prod:~$</span> rm -rf  /ods /temp</div>
+        <div style={{ color: "#a89c84" }}># 注意中间那个空格 —— 万恶之源。</div>
+        <div className="danger">↳ 已删除 200TB · 甲方数据库根目录</div>
+        <div style={{ color: "#a89c84" }}># 你的前任，已不在群里。</div>
+        <div><span className="prompt">you@prod:~$</span> <span className="blink">_</span></div>
+      </div>
+      <div className="body">
+        <p>你还没来得及熟悉新同事的名字，就已经跟着数据团队没日没夜地加班 <b>恢复数据</b>。</p>
+        <p>说是「恢复」，其实就是把表导来导去，重跑脚本。</p>
+        <p>你不懂那些业务逻辑，你只是一个人形 <span className="crontab-tag">crontab</span>。</p>
+        <p>你隐隐觉得哪里不对，但又说不上来。毕竟，这才是第一天。</p>
+      </div>
+      <Arrow onClick={() => go("award")} />
+    </div>
+  );
+}
+
+// ---- Act 2: 表彰 ----
+function AwardScene({ go }) {
+  return (
+    <div className="scene-inner">
+      <div className="eyebrow">第 二 幕 · 表彰</div>
+      <div className="title">领导说你最近表现很好，<br/>公司决定给你一个惊喜。</div>
+      <Choices
+        items={[
+          { label: "期待" },
+          { label: "感激涕零" },
+        ]}
+        onPick={() => go("awardPhoto")}
+      />
+    </div>
+  );
+}
+
+function AwardPhotoScene({ go }) {
+  return (
+    <div className="scene-inner">
+      <PhotoFrame src={A("actMonthstar", "assets/act-monthstar.png")} caption="5 月月度之星 · 塑封 · 永不褪色" />
+      <div className="body">
+        <p>惊喜是把你的照片塑封挂墙上，外加 <b>200 元现金奖励</b>。</p>
+        <p>你算了一下，加班三十天，平均每天值 <b>6 块 6 毛钱</b>。连楼下的煎饼果子都加不起肉。</p>
+        <p>但真正的惩罚不是钱。是这张照片会一直挂在那里，用你曾经的下颌线无声地控诉你现在的双下巴。</p>
+        <p>你胖了，但照片不会。它会替你记住你刚入职时的样子 —— 那个还没有被台账和外卖喂养过的你。</p>
+      </div>
+      <Arrow onClick={() => go("act1")} />
+    </div>
+  );
+}
+
+// ---- Act 3: 驻场 ----
+function Act1Scene({ go }) {
+  return (
+    <div className="scene-inner">
+      <div className="eyebrow">第 三 幕 · 驻场</div>
+      <div className="title">
+        你终于把数据恢复得差不多了，<br/>开始正常下班。
+      </div>
+      <div className="body">
+        <p>这让领导觉得你最近工作不够饱和，决定让你 —— 在轻松的工作之余，顺便给甲方提供 <b>情绪价值</b>。</p>
+      </div>
+      <Choices
+        items={[
+          { label: "接受" },
+          { label: "辞职", fake: "rejected1" },
+        ]}
+        onPick={(it) => {
+          if (it.fake) {
+            // shake then accept
+            setTimeout(() => go("act1Photo", { rejected: "rejected1" }), 700);
+          } else {
+            go("act1Photo");
+          }
+        }}
+      />
+    </div>
+  );
+}
+
+function Act1PhotoScene({ go, rejected }) {
+  return (
+    <div className="scene-inner">
+      {rejected && <RejectedToastInline reason="提交辞职申请。HR 笑了。" />}
+      <PhotoFrame src={A("act1Cubicle", "assets/act1-cubicle.png")} caption="甲方办公区 · 你的新工位" />
+      <div className="body">
+        <p>于是你终于有了一个有空调的工位 —— 在 <b>甲方</b>。</p>
+      </div>
+      <Arrow onClick={() => go("act2")} />
+    </div>
+  );
+}
+
+// Small inline rejection note (when user picked 辞职)
+function RejectedToastInline({ reason }) {
+  return (
+    <div style={{
+      background: "rgba(139,58,46,0.08)",
+      border: "1px dashed rgba(139,58,46,0.35)",
+      borderRadius: 8,
+      padding: "10px 14px",
+      fontFamily: "Noto Sans SC, sans-serif",
+      fontSize: 12,
+      color: "var(--seal)",
+      textAlign: "center",
+      letterSpacing: "0.1em",
+    }}>
+      你点击了「辞职」。{reason}
+    </div>
+  );
+}
+
+// ---- Act 2: 外卖 ----
+function Act2Scene({ go }) {
+  return (
+    <div className="scene-inner">
+      <div className="eyebrow">第 四 幕 · 外卖</div>
+      <div className="title">同事们饿了。</div>
+      <div className="chat">
+        <div className="chat-header">李鹭</div>
+        <div className="bubble-row">
+          <div className="av" style={{ padding: 0, overflow: "hidden" }}>
+            <img src={A("liluAvatar", "assets/lilu-avatar.png")} alt="李鹭" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+          </div>
+          <div className="bubble">哥哥<br/>帮我拿一下外卖可以吗 🥺<br/>反正是顺路的~</div>
+        </div>
+      </div>
+      <Choices
+        items={[
+          { label: "接受" },
+          { label: "辞职", fake: "rejected2" },
+        ]}
+        onPick={(it) => {
+          if (it.fake) setTimeout(() => go("act2Photo", { rejected: "rejected2" }), 700);
+          else go("act2Photo");
+        }}
+      />
+    </div>
+  );
+}
+
+function Act2PhotoScene({ go, rejected }) {
+  return (
+    <div className="scene-inner">
+      {rejected && <RejectedToastInline reason="同事没听见。" />}
+      <PhotoFrame src={A("act2Takeout", "assets/act2-takeout.png")} caption="「顺路」×6 · 手提充实" />
+      <div className="body">
+        <p>「顺路」拿了 <b>6 袋</b> 外卖。</p>
+        <p>你不是外卖员，但你拥有外卖员的一切素质。</p>
+      </div>
+      <Arrow onClick={() => go("birthday")} />
+    </div>
+  );
+}
+
+// ---- Act 5: 生日快乐 ----
+function BirthdayScene({ go }) {
+  return (
+    <div className="scene-inner">
+      <div className="eyebrow">第 五 幕 · 生日快乐</div>
+      <div className="title">甲方团建聚餐，<br/>顺便给同事过生日。<br/><span style={{ color: "var(--muted)", fontWeight: 400, fontSize: "0.85em" }}>你也收到了邀请 —— 准确地说，是通知。</span></div>
+      <Choices
+        items={[
+          { label: "参加" },
+          { label: "辞职", fake: "rejected5" },
+        ]}
+        onPick={(it) => {
+          if (it.fake) setTimeout(() => go("birthdayPhoto", { rejected: "rejected5" }), 700);
+          else go("birthdayPhoto");
+        }}
+      />
+    </div>
+  );
+}
+
+function BirthdayPhotoScene({ go, rejected }) {
+  return (
+    <div className="scene-inner">
+      {rejected && <RejectedToastInline reason="LED 灯牌已经亮了。" />}
+      <PhotoFrame src={A("actBirthday", "assets/act-birthday.png")} caption="火锅店 · LED 灯牌 · 群演就位" />
+      <div className="body">
+        <p>服务员举着 LED 灯牌，全桌鼓掌欢呼。每个人都洋溢着发自内心的快乐 —— <b>除了你</b>。</p>
+        <p>你坐在角落，神情迷茫。</p>
+        <p>这不是你的生日，不是你的同事，不是你的团建，甚至不是你的公司。但你围着别人公司的围裙，吃着别人公司的锅底，替别人公司的团队凝聚力充当了背景板。饭后 AA，你付了 <b>87 块钱</b>。你不知道这算团建费用还是群演报酬（负的）。</p>
+        <p>后来这张照片被发在甲方工作群里，配文「家人们太有爱了🥰」。你在九宫格第四张的左下角找到了自己 —— 半张脸，闭着眼，像一个被 P 上去的素材但修图师忘了调色温。</p>
+        <p>你的直属领导在底下点了赞，评论说<span style={{ background: "rgba(31,24,20,0.06)", padding: "1px 6px", borderRadius: 3 }}>「融入感很强，继续保持💪」</span>。你盯着这八个字看了很久，确认了中文确实是你的母语，但你一个字也看不懂。</p>
+      </div>
+      <Arrow onClick={() => go("act3")} />
+    </div>
+  );
+}
+
+// ---- Act 6: 表白 ----
+function Act3Scene({ go }) {
+  return (
+    <div className="scene-inner">
+      <div className="eyebrow">第 六 幕 · 表白</div>
+      <div className="title">某魏姓同事让你下班别走。</div>
+      <div className="body">
+        <p>他说，有 <b>重要的事情</b> 要跟你说。</p>
+        <p>他的表情看起来有点扭捏。</p>
+      </div>
+      <Choices
+        items={[
+          { label: "接受" },
+          { label: "辞职", fake: "rejected3" },
+        ]}
+        onPick={(it) => {
+          if (it.fake) setTimeout(() => go("act3Photo", { rejected: "rejected3" }), 700);
+          else go("act3Photo");
+        }}
+      />
+    </div>
+  );
+}
+
+function Act3PhotoScene({ go, rejected }) {
+  return (
+    <div className="scene-inner">
+      {rejected && <RejectedToastInline reason="他锁了车门。" />}
+      <PhotoFrame src={A("act3Parking", "assets/act3-parking.png")} caption="停车场 · 不能独自行走的下班" />
+      <div className="body">
+        <p>他向你深情表白，称你是他这辈子 <b>唯一的真爱</b>。</p>
+        <p>你拒绝了。</p>
+        <p>但这不重要 —— 他单方面宣布了你们的恋情。</p>
+        <p style={{ color: "var(--muted)" }}>从此，你失去了在公司独自行走的权利。</p>
+      </div>
+      <Arrow onClick={() => go("pregnancy")} />
+    </div>
+  );
+}
+
+// ---- Act 7: 怀孕 ----
+function PregnancyScene({ go }) {
+  return (
+    <div className="scene-inner">
+      <div className="eyebrow">第 七 幕 · 怀孕</div>
+      <div className="title">同事发现你最近胖了，<br/>关心地摸了摸你的肚子。</div>
+      <Choices
+        items={[
+          { label: "接受" },
+          { label: "辞职", fake: "rejected7" },
+        ]}
+        onPick={(it) => {
+          if (it.fake) setTimeout(() => go("pregnancyBelly", { rejected: "rejected7" }), 700);
+          else go("pregnancyBelly");
+        }}
+      />
+    </div>
+  );
+}
+
+function PregnancyBellyScene({ go, rejected }) {
+  return (
+    <div className="scene-inner">
+      {rejected && <RejectedToastInline reason="他的手已经放上来了。" />}
+      <PhotoFrame src={A("actBelly", "assets/act-belly.png")} caption="工区 · 确认胎位 · 全员围观" />
+      <div className="body">
+        <p>你低头看着同事的手放在你的肚子上，动作温柔得像在 <b>确认胎位</b>。</p>
+        <p>你的笔记本屏幕上还开着摸鱼网页，但没人在乎 —— 此刻你的腹部才是全工区的焦点。</p>
+        <p style={{ color: "var(--muted)", fontStyle: "italic" }}>消息很快传开了。</p>
+      </div>
+      <Arrow onClick={() => go("pregnancyChat")} />
+    </div>
+  );
+}
+
+function PregnancyChatScene({ go }) {
+  return (
+    <div className="scene-inner">
+      <div className="eyebrow">某 个 群 聊 · 已 截 图</div>
+      <PhotoFrame src={A("actChatPregnant", "assets/act-chat-pregnant.png")} caption="「莫 · 李鹭的？」" />
+      <div className="body">
+        <p>你在工位上点开了这张截图。</p>
+        <p>你不知道该先反驳「<b>看起来怀孕</b>」，还是先反驳「<b>李鹭的</b>」。</p>
+      </div>
+      <Arrow onClick={() => go("pregnancyReaction")} />
+    </div>
+  );
+}
+
+function PregnancyReactionScene({ go }) {
+  return (
+    <div className="scene-inner">
+      <div className="eyebrow">魏 姓 同 事 · 下 班 后</div>
+      <div className="body">
+        <p>消息不知道怎么传到了魏姓同事那里。他没有发火，没有质问，只是在工位上沉默了很久。</p>
+        <p>下班后他拦住你，用一种你在韩剧里才见过的眼神看着你，问：</p>
+        <p style={{ textAlign: "center", fontFamily: "'Ma Shan Zheng', serif", fontSize: 22, color: "var(--seal)", margin: "8px 0 16px" }}>「你是不是有了别人。」</p>
+        <p>你张了张嘴，想解释这只是 <b>二十斤肥肉</b>，但他已经转身走了。那个背影带着一种被辜负的尊严，像极了你每个月看到工资条时的自己。</p>
+        <p>你坐在工位上，开始认真思考你的肚子到底在这段三角关系里扮演什么角色。你没有得出结论。你只是默默把下午准备喝的奶茶从购物车里删了。</p>
+        <p style={{ color: "var(--seal)" }}>三十秒后你又加了回去。毕竟孩子需要营养。</p>
+      </div>
+      <Arrow onClick={() => go("finalIntro")} />
+    </div>
+  );
+}
+
+// ---- Easter egg: lottery ----
+function LotteryIntro({ go }) {
+  return (
+    <div className="scene-inner">
+      <div className="eyebrow">彩 蛋 · 下 班 路 上</div>
+      <div className="title" style={{ fontSize: 22 }}>
+        你忘记了家里的产业，<br/>路过彩票店，<br/>突发奇想买了一张刮刮乐。
+      </div>
+      <Choices items={[{ label: "刮开" }]} onPick={() => go("lotteryScratch")} />
+    </div>
+  );
+}
+
+function LotteryScratch({ go }) {
+  const [revealed, setRevealed] = useState(false);
+  return (
+    <div className="scene-inner" style={{ textAlign: "center" }}>
+      <div className="eyebrow">中 国 福 利 彩 票 · 刮 刮 乐</div>
+      <ScratchCard
+        amount={revealed ? "5,000,000" : "5,000,000"}
+        label={"中 奖 金 额 / RMB"}
+        onScratchedEnough={() => setRevealed(true)}
+      />
+      {revealed && (
+        <>
+          <div className="body" style={{ textAlign: "left" }}>
+            <p>你愣住了。</p>
+            <p><b>五百万。</b></p>
+            <p>你不敢相信自己的眼睛，怀疑自己加班出幻觉了。你又确认了一遍。</p>
+          </div>
+          <Arrow onClick={() => go("lotteryReveal2")} />
+        </>
+      )}
+    </div>
+  );
+}
+
+function LotteryReveal2({ go }) {
+  return (
+    <div className="scene-inner" style={{ textAlign: "center" }}>
+      <div className="eyebrow">再 看 一 眼</div>
+      <div className="ph" style={{ aspectRatio: "1.5/1", width: "min(86%, 320px)", margin: "8px auto", background: "radial-gradient(circle at 30% 30%, #fff6da 0, #f0deaa 60%, #d8b96a 100%)", color: "var(--seal)" }}>
+        <div className="ph-label" style={{ background: "transparent", padding: 0 }}>
+          <div style={{ fontFamily: "Ma Shan Zheng, serif", fontSize: 44, lineHeight: 1.1, color: "var(--seal)" }}>50,000,000</div>
+          <div style={{ fontFamily: "Noto Sans SC, sans-serif", fontSize: 12, marginTop: 6, letterSpacing: "0.3em", color: "var(--ink-2)" }}>中 奖 金 额 / RMB</div>
+        </div>
+      </div>
+      <div className="body" style={{ textAlign: "left" }}>
+        <p>你确实看错了。<br/>你少看了一个 <b>零</b>。</p>
+        <p>不是五百万，是 <b>五千万</b>。</p>
+        <p>你的手在发抖。</p>
+      </div>
+      <Arrow onClick={() => go("lotteryHandshake")} />
+    </div>
+  );
+}
+
+function LotteryHandshake({ go }) {
+  return (
+    <div className="scene-inner">
+      <div className="eyebrow">不 知 道 谁 走 漏 了 风 声</div>
+      <PhotoFrame src={A("lotteryHandshake", "assets/lottery-handshake.png")} caption="甲方领导 · 握手 · 不肯松开" />
+      <div className="body">
+        <p>消息不知道怎么传到了甲方。</p>
+        <p>领导亲自下楼迎接你，握着你的手不肯松开，说一直很看好你的能力和潜力 —— </p>
+        <p>并 <b>诚挚邀请你投资</b> 他的一个内部项目。</p>
+        <p style={{ background: "rgba(184,146,58,0.12)", padding: "10px 14px", borderRadius: 6, color: "var(--ink)" }}>
+          🤝 保本 · 年化 <b>30%</b>
+        </p>
+      </div>
+      <Choices
+        items={[
+          { label: "投资" },
+          { label: "辞职" },
+        ]}
+        onPick={(it, i) => go(i === 0 ? "lotteryLost" : "celebrate")}
+      />
+    </div>
+  );
+}
+
+function LotteryLost({ go, returnTo }) {
+  return (
+    <div className="scene-inner">
+      <div className="eyebrow">三 个 月 后</div>
+      <div className="reveal-line">你的 5000 万没了。</div>
+      <div className="body">
+        <p>年化 30%，本金归零，用时 <b>三个月</b>。</p>
+        <p>你又回到了工位上，假装什么都没发生过。</p>
+      </div>
+      <Arrow onClick={() => go(returnTo || "act2")} />
+    </div>
+  );
+}
+
+// ---- Final ----
+function FinalIntroScene({ go }) {
+  return (
+    <div className="scene-inner">
+      <div className="eyebrow">最 终 幕</div>
+      <div className="title">
+        你已经习惯了这一切。<br/>
+        <span style={{ color: "var(--muted)", fontWeight: 400 }}>你觉得生活虽然苦，但如果是和这些人一起的话……</span>
+      </div>
+      <div className="body">
+        <p>直到有一天 ——</p>
+      </div>
+      <Arrow onClick={() => go("finalNews")} />
+    </div>
+  );
+}
+
+function FinalNewsScene({ go }) {
+  return (
+    <div className="scene-inner">
+      <div className="news">
+        <div className="news-head">
+          <span className="news-tag">快讯</span>
+          <span>2026.11.07 · 14:22</span>
+        </div>
+        <h4>工信部与 SpaceX 签署战略合作协议</h4>
+        <div className="news-body">
+          <p>Starlink 将全面接管中国通信基础设施，三大运营商于年底前完成历史使命。</p>
+          <div className="news-quote">「我们的征途是星辰，没有大海。」<br/>—— 工信部发言人</div>
+        </div>
+      </div>
+      <div className="body">
+        <p>甲方没了。</p>
+        <p>没有任何一家运营商打败了对手 —— 你听说最后的赢家是一个 <b>姓马的外国人</b>。</p>
+        <p>总之，你失去了 <b>最后的利用价值</b>。</p>
+        <p style={{ color: "var(--seal)", fontWeight: 500 }}>但换个角度想 —— 你自由了。</p>
+      </div>
+      <Arrow onClick={() => go("celebrate")} />
+    </div>
+  );
+}
+
+window.Scenes = {
+  TitleScene, EnvelopeScene, LetterScene, RealizeScene,
+  ChoiceOfferScene, RevealJobScene, SearchHeinuScene,
+  HRScene, ChoiceOnboardScene, RevealRmrfScene,
+  AwardScene, AwardPhotoScene,
+  Act1Scene, Act1PhotoScene,
+  Act2Scene, Act2PhotoScene,
+  BirthdayScene, BirthdayPhotoScene,
+  Act3Scene, Act3PhotoScene,
+  PregnancyScene, PregnancyBellyScene, PregnancyChatScene, PregnancyReactionScene,
+  LotteryIntro, LotteryScratch, LotteryReveal2, LotteryHandshake, LotteryLost,
+  FinalIntroScene, FinalNewsScene,
+};
+
+</script>
+<script type="text/babel" data-source="app.jsx">
+// Main app, scene routing, celebration, fireworks, note easter egg
+const S = window.Scenes;
+const E = React.createElement;
+
+// ---- Audio controller ----
+const Audio = (() => {
+  let main, finale, muted = false, started = false, current = null;
+  const get = () => {
+    main = main || document.getElementById("audio-main");
+    finale = finale || document.getElementById("audio-finale");
+    if (main) main.volume = 0.5;
+    if (finale) finale.volume = 0.6;
+    return { main, finale };
+  };
+  const fade = (el, to, ms = 600) => {
+    if (!el) return;
+    const from = el.volume;
+    const start = performance.now();
+    const step = (t) => {
+      const k = Math.min(1, (t - start) / ms);
+      el.volume = from + (to - from) * k;
+      if (k < 1) requestAnimationFrame(step);
+      else if (to === 0) el.pause();
+    };
+    requestAnimationFrame(step);
+  };
+  const playTrack = (which) => {
+    const { main, finale } = get();
+    if (!main || !finale) return;
+    if (current === which) return;
+    current = which;
+    if (muted) return;
+    if (which === "main") {
+      fade(finale, 0, 400);
+      main.volume = 0;
+      main.play().then(() => fade(main, 0.5, 800)).catch(()=>{});
+    } else if (which === "finale") {
+      fade(main, 0, 600);
+      finale.currentTime = 0;
+      finale.volume = 0;
+      finale.play().then(() => fade(finale, 0.6, 1200)).catch(()=>{});
+    } else if (which === "none") {
+      // Silence both tracks (page 18: 什么都不放)
+      fade(main, 0, 600);
+      fade(finale, 0, 600);
+    }
+  };
+  const start = () => {
+    if (started) return;
+    started = true;
+    playTrack(current || "main");
+  };
+  const setMuted = (m) => {
+    muted = m;
+    const { main, finale } = get();
+    [main, finale].forEach(a => { if (a) a.muted = m; });
+    if (!m && started && current) playTrack(current);
+  };
+  const isMuted = () => muted;
+  return { start, playTrack, setMuted, isMuted };
+})();
+
+// Bootstrap audio on first interaction (autoplay policy)
+function bootstrapAudio() {
+  const kick = () => {
+    Audio.start();
+    window.removeEventListener("pointerdown", kick);
+    window.removeEventListener("keydown", kick);
+    window.removeEventListener("touchstart", kick);
+  };
+  window.addEventListener("pointerdown", kick, { once: true });
+  window.addEventListener("keydown", kick, { once: true });
+  window.addEventListener("touchstart", kick, { once: true });
+}
+bootstrapAudio();
+
+// Mute toggle wiring
+(function setupMuteBtn() {
+  const wire = () => {
+    const btn = document.getElementById("mute-btn");
+    if (!btn) { requestAnimationFrame(wire); return; }
+    const on = document.getElementById("mute-icon-on");
+    const off = document.getElementById("mute-icon-off");
+    btn.addEventListener("click", () => {
+      const next = !Audio.isMuted();
+      Audio.setMuted(next);
+      on.style.display = next ? "none" : "";
+      off.style.display = next ? "" : "none";
+    });
+  };
+  wire();
+})();
+
+const SCENE_ORDER = [
+  "title", "envelope", "letter", "realize",
+  "choiceOffer", "revealJob", "searchHeinu",
+  "hr", "choiceOnboard", "revealRmrf",
+  "award", "awardPhoto",
+  "act1", "act1Photo",
+  "act2", "act2Photo",
+  "birthday", "birthdayPhoto",
+  "act3", "act3Photo",
+  "pregnancy", "pregnancyBelly", "pregnancyChat", "pregnancyReaction",
+  "finalIntro", "finalNews", "celebrate",
+];
+
+// Which scenes can show the easter-egg note (acts 2-7 narrative beats)
+const NOTE_SCENES = new Set([
+  "award", "awardPhoto",
+  "act1", "act1Photo",
+  "act2", "act2Photo",
+  "birthday", "birthdayPhoto",
+  "act3", "act3Photo",
+  "pregnancy", "pregnancyBelly", "pregnancyChat", "pregnancyReaction",
+]);
+
+function App() {
+  const [scene, setScene] = React.useState("title");
+  const [sceneProps, setSceneProps] = React.useState({});
+  const [returnTo, setReturnTo] = React.useState(null);
+  const [lotteryUsed, setLotteryUsed] = React.useState(false);
+  const [toastMsg, setToastMsg] = React.useState("");
+  const toastRef = React.useRef(null);
+
+  const showToast = (msg, dur = 1400) => {
+    setToastMsg(msg);
+    const t = toastRef.current;
+    if (!t) return;
+    t.classList.add("show");
+    clearTimeout(t._t);
+    t._t = setTimeout(() => t.classList.remove("show"), dur);
+  };
+
+  const go = (next, extraProps = {}) => {
+    // Audio routing:
+    //  - finalNews (page 18): silence — no track
+    //  - celebrate: finale track
+    //  - title / everything else: main track
+    if (next === "finalNews") Audio.playTrack("none");
+    else if (next === "celebrate") Audio.playTrack("finale");
+    else if (next === "title") Audio.playTrack("main");
+    setScene(next);
+    setSceneProps(extraProps);
+    // scroll active scene to top
+    setTimeout(() => {
+      const el = document.querySelector(".scene.active");
+      if (el) el.scrollTop = 0;
+    }, 50);
+  };
+
+  const onNoteClick = () => {
+    if (lotteryUsed) return;
+    setLotteryUsed(true);
+    setReturnTo(scene);
+    go("lotteryIntro");
+  };
+
+  // update note visibility / progress label
+  React.useEffect(() => {
+    const note = document.getElementById("note");
+    if (note) {
+      if (NOTE_SCENES.has(scene) && !lotteryUsed) {
+        note.classList.remove("gone");
+        note.onclick = onNoteClick;
+      } else {
+        note.classList.add("gone");
+      }
+    }
+    const prog = document.getElementById("progress");
+    if (prog) {
+      const idx = SCENE_ORDER.indexOf(scene);
+      if (idx >= 0) {
+        prog.textContent = String(idx + 1).padStart(2, "0") + " · " + String(SCENE_ORDER.length).padStart(2, "0");
+      } else {
+        prog.textContent = "彩 · 蛋";
+      }
+    }
+  }, [scene, lotteryUsed]);
+
+  function getNextMain(s) {
+    const i = SCENE_ORDER.indexOf(s);
+    if (i === -1) return "act2";
+    return SCENE_ORDER[Math.min(i + 1, SCENE_ORDER.length - 1)];
+  }
+
+  const restart = () => {
+    setLotteryUsed(false);
+    setReturnTo(null);
+    Audio.playTrack("main");
+    go("title");
+  };
+
+  const map = {
+    title: S.TitleScene,
+    envelope: S.EnvelopeScene,
+    letter: S.LetterScene,
+    realize: S.RealizeScene,
+    choiceOffer: S.ChoiceOfferScene,
+    revealJob: S.RevealJobScene,
+    searchHeinu: S.SearchHeinuScene,
+    hr: S.HRScene,
+    choiceOnboard: S.ChoiceOnboardScene,
+    revealRmrf: S.RevealRmrfScene,
+    award: S.AwardScene,
+    awardPhoto: S.AwardPhotoScene,
+    act1: S.Act1Scene,
+    act1Photo: S.Act1PhotoScene,
+    act2: S.Act2Scene,
+    act2Photo: S.Act2PhotoScene,
+    birthday: S.BirthdayScene,
+    birthdayPhoto: S.BirthdayPhotoScene,
+    act3: S.Act3Scene,
+    act3Photo: S.Act3PhotoScene,
+    pregnancy: S.PregnancyScene,
+    pregnancyBelly: S.PregnancyBellyScene,
+    pregnancyChat: S.PregnancyChatScene,
+    pregnancyReaction: S.PregnancyReactionScene,
+    lotteryIntro: S.LotteryIntro,
+    lotteryScratch: S.LotteryScratch,
+    lotteryReveal2: S.LotteryReveal2,
+    lotteryHandshake: S.LotteryHandshake,
+    lotteryLost: (p) => E(S.LotteryLost, { ...p, returnTo }),
+    finalIntro: S.FinalIntroScene,
+    finalNews: S.FinalNewsScene,
+  };
+
+  // Celebration scene is special: full takeover
+  if (scene === "celebrate") {
+    Audio.playTrack("finale");
+    return E(Celebration, { restart });
+  }
+
+  const Cur = map[scene];
+
+  return (
+    <div className="scene active" data-screen-label={"scene-" + scene}>
+      {Cur && E(Cur, { go, ...sceneProps })}
+    </div>
+  );
+}
+
+// Sync toast text
+function MountToast() {
+  return null;
+}
+
+// ---- Celebration ----
+function Celebration({ restart }) {
+  React.useEffect(() => {
+    const c = document.getElementById("fw");
+    if (!c) return;
+    const ctx = c.getContext("2d");
+    const rect = c.parentElement.getBoundingClientRect();
+    const dpr = window.devicePixelRatio || 1;
+    c.width = rect.width * dpr;
+    c.height = rect.height * dpr;
+    c.style.width = rect.width + "px";
+    c.style.height = rect.height + "px";
+    ctx.scale(dpr, dpr);
+
+    let parts = [];
+    let confetti = [];
+    let raf;
+    let lastFw = 0;
+
+    const COLORS = ["#8b3a2e", "#b8923a", "#5d7b4a", "#c08a3a", "#d4925a", "#e6c068"];
+
+    function launchFirework() {
+      const x = rect.width * (0.2 + Math.random() * 0.6);
+      const y = rect.height * (0.2 + Math.random() * 0.4);
+      const color = COLORS[(Math.random() * COLORS.length) | 0];
+      const n = 36 + ((Math.random() * 18) | 0);
+      for (let i = 0; i < n; i++) {
+        const a = (Math.PI * 2 * i) / n + Math.random() * 0.1;
+        const sp = 2 + Math.random() * 3;
+        parts.push({
+          x, y,
+          vx: Math.cos(a) * sp,
+          vy: Math.sin(a) * sp,
+          life: 1,
+          color,
+        });
+      }
+    }
+    function spawnConfetti() {
+      for (let i = 0; i < 2; i++) {
+        confetti.push({
+          x: Math.random() * rect.width,
+          y: -10,
+          vy: 1 + Math.random() * 2,
+          vx: (Math.random() - 0.5) * 1.2,
+          r: 3 + Math.random() * 3,
+          color: COLORS[(Math.random() * COLORS.length) | 0],
+          rot: Math.random() * Math.PI,
+          vrot: (Math.random() - 0.5) * 0.2,
+        });
+      }
+    }
+
+    function tick(t) {
+      ctx.clearRect(0, 0, rect.width, rect.height);
+      if (t - lastFw > 700) {
+        launchFirework();
+        lastFw = t;
+      }
+      spawnConfetti();
+
+      parts = parts.filter(p => p.life > 0);
+      parts.forEach(p => {
+        p.x += p.vx;
+        p.y += p.vy;
+        p.vy += 0.05;
+        p.vx *= 0.99;
+        p.life -= 0.012;
+        ctx.globalAlpha = Math.max(p.life, 0);
+        ctx.fillStyle = p.color;
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, 2.4, 0, Math.PI * 2);
+        ctx.fill();
+      });
+      ctx.globalAlpha = 1;
+
+      confetti = confetti.filter(c => c.y < rect.height + 20);
+      confetti.forEach(co => {
+        co.x += co.vx;
+        co.y += co.vy;
+        co.rot += co.vrot;
+        ctx.save();
+        ctx.translate(co.x, co.y);
+        ctx.rotate(co.rot);
+        ctx.fillStyle = co.color;
+        ctx.fillRect(-co.r, -co.r * 0.4, co.r * 2, co.r * 0.8);
+        ctx.restore();
+      });
+
+      raf = requestAnimationFrame(tick);
+    }
+    raf = requestAnimationFrame(tick);
+    return () => {
+      cancelAnimationFrame(raf);
+      // Clear canvas so leftover frames don't linger after restart
+      ctx.clearRect(0, 0, rect.width, rect.height);
+    };
+  }, []);
+
+  return (
+    <div className="celebrate">
+      <div className="sub">G O O D · L U C K</div>
+      <h1>恭 喜 脱 离 苦 海</h1>
+      <div className="sub" style={{ letterSpacing: "0.3em", marginTop: 4 }}>2023 — 2025 · 一段两年的回忆</div>
+
+      <div className="blessing" style={{ marginTop: 28 }}>
+        <p>你不知道这两年有什么意义。加了多少次班，导了多少张表，填了多少份安全检查材料。不会有人记得，就连你自己也会慢慢忘记。</p>
+        <p>集群也不在乎，它只是继续在亚健康状态顽强地运行着。</p>
+        <p>但没关系，你决定先回家。</p>
+        <p>长春的夏天快到了。或许净月潭的树影、南湖的晚风，和傍晚终于慢下来的天光会告诉你答案，又或许不会。但至少那里没有台账要写。</p>
+        <p>至于未来——谁知道呢。也许有一天你在K线图里抓住了一根改变命运的阳线，实现了所有打工人做梦都不敢做的财富自由。到那时候记得回来请大家吃饭，<span style={{ color: "var(--seal)" }}>别让魏姓同事知道你的新地址就行</span>。</p>
+      </div>
+
+      <div className="sign">祝前路松弛，钱包膨胀。</div>
+      <button className="restart" onClick={restart}>再来一遍 ↻</button>
+    </div>
+  );
+}
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<App />);
+
+</script>
+</body>
+</html>
